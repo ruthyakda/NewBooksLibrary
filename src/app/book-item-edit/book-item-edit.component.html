@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="bookItemEdit.author">
+<input type="text" [(ngModel)]="bookItemEdit.title">
+<input type="date" [(ngModel)]="bookItemEdit.date">
+<input type="button" (click)="cancelEdit(bookItemEdit)" value="Cancel">
+<input type="button" (click)="saveEdit(bookItemEdit)" value="Save">
+
+
