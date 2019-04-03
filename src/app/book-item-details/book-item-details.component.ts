@@ -1,27 +1,28 @@
-import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from '../book';
 
 @Component({
   selector: 'app-book-item-details',
   templateUrl: './book-item-details.component.html',
-  styleUrls: ['./book-item-details.component.scss']
+  styleUrls: ['./book-item-details.component.sass']
 })
-
 export class BookItemDetailsComponent implements OnInit {
 
+  @Input() bookItem:Book;
+  @Output() openEditbookItem: EventEmitter<Book>=new EventEmitter();
+  @Output() deleteBookItem: EventEmitter<Book>= new EventEmitter();
 
-@Input() bookItem: Book;
-@Output() openEditbookItem: EventEmitter<Book> = new EventEmitter();
-@Output() deletebookItem: EventEmitter<Book> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
-openEdit(book: Book){
-  this.openEditbookItem.emit(book);
+openEdit(b:Book){
+  this.openEditbookItem.emit(b);
 }
-deleteItem(book: Book){
-this.deletebookItem.emit(book);
+
+deleteItem(b:Book)
+{
+this.deleteBookItem.emit(b);
 }
 }

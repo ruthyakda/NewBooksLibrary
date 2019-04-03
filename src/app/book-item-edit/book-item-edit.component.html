@@ -1,7 +1,5 @@
-<input type="text" [(ngModel)]="bookItemEdit.author">
-<input type="text" [(ngModel)]="bookItemEdit.title">
-<input type="date" [(ngModel)]="bookItemEdit.date">
-<input type="button" (click)="cancelEdit(bookItemEdit)" value="Cancel">
-<input type="button" (click)="saveEdit(bookItemEdit)" value="Save">
-
-
+<input type="text" [(ngModel)]="curretBookInput.author" >
+<input type="text" [(ngModel)]="curretBookInput.title" >
+<input type="date" [(ngModel)]="curretBookInput.date" >
+<input type="button" (click)="cancelBook()" value="Cancel" />
+<input type="button" (click)="updateBook()" value="Save edit" />
